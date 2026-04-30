@@ -9,9 +9,12 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 ```
 .
 ├── codigo_penal.txt              # Corpus limpio (~68K palabras)
-├── comparacion.txt               # Comparacion modelo base vs entrenado
-├── observaciones.txt             # Analisis cualitativo
+├── comparacion.txt               # Comparacion modelo base vs entrenado (QLoRA)
+├── comparacion_adam.txt          # Comparacion modelo base vs entrenado (Adam)
+├── observaciones.txt             # Analisis cualitativo (QLoRA)
+├── observaciones_adam.txt        # Analisis cualitativo (Adam)
 ├── entrenar_lora.py              # Script de entrenamiento (QLoRA)
+├── entrenar_adam.py              # Script de entrenamiento (QLoRA + AdamW8bit)
 ├── comparar.py                   # Script de comparacion
 ├── descargar_modelo_base.py      # Script para descargar modelo base
 ├── extract_pdf.py                # Script para extraer texto del PDF
@@ -19,7 +22,10 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 ├── modelo_base/                  # Modelo original Qwen3.5-0.8B
 ├── modelo_entrenado/             # Adaptadores LoRA (PEFT)
 ├── modelo_entrenado_merged/      # Modelo completo mergeado
-└── resultados_lora/              # Checkpoints del entrenamiento
+├── modelo_entrenado_adam/        # Adaptadores LoRA entrenados con Adam
+├── modelo_entrenado_adam_merged/ # Modelo mergeado con Adam
+├── resultados_lora/              # Checkpoints del entrenamiento
+└── resultados_adam/              # Checkpoints del entrenamiento con Adam
 ```
 
 ---
@@ -172,6 +178,35 @@ optimizer = Lion(
 
 ### Recomendacion final
 Para esta PoC, **QLoRA + AdamW8bit** seria el siguiente paso si se quiere pasar de adaptadores a full fine-tuning sin aumentar la VRAM. Si se mantiene QLoRA, usar **AdamW con weight decay diferenciado** y **warmup del 20%** mejoraria la estabilidad y reduciria el olvido catastrofico.
+
+---
+
+## Experimento adicional: QLoRA + AdamW8bit
+
+Se ejecuto una segunda ronda de entrenamiento aplicando las mejoras de Adam documentadas arriba:
+
+- **Optimizador:** `bnb.optim.AdamW8bit` con weight decay diferenciado
+- **Scheduler:** Coseno con warmup del 10%
+- **Epochs:** 5 (vs 3 en la primera ronda)
+- **LR:** 1e-4 (vs 2e-4 anterior)
+- **Loss final:** ~1.57 (vs ~1.87 en QLoRA estandar)
+
+### Hallazgos del experimento Adam
+
+| Aspecto | QLoRA estandar | QLoRA + AdamW8bit |
+|---|---|---|
+| **Loss final** | ~1.87 | ~1.57 |
+| **Contaminacion idiomatica** | Portugues en prompts de dolo | Menos contaminacion |
+| **Estilo juridico** | Basico | Mas formal, estructura de articulos |
+| **Alucinaciones** | Severas | Persisten, pero mas cercanas al dominio |
+| **Overfitting** | Severo | Severo (inevitable con corpus pequeno) |
+
+**Conclusion:** AdamW8bit mejor marginalmente la calidad del entrenamiento, pero el cuello de botella principal sigue siendo el **tamano del corpus**. Requiere corpus 10x-100x mayor para eliminar overfitting y alucinaciones.
+
+### Como ejecutar el experimento Adam
+```bash
+python entrenar_adam.py
+```
 
 ---
 

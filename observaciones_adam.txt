@@ -1,0 +1,61 @@
+OBSERVACIONES: MODELO ENTRENADO CON ADAMW8BIT (5 EPOCHS, QLoRA)
+================================================================
+
+METODOLOGIA
+-----------
+- Optimizador: AdamW8bit (8-bit) con weight decay diferenciado
+  * Decay 0.01 en capas de atencion
+  * Decay 0.00 en bias, norm y embeddings
+- Scheduler: Coseno con warmup del 10% (~31 steps)
+- Epochs: 5 (vs 3 en el experimento anterior)
+- Learning rate: 1e-4 (vs 2e-4 anterior)
+- Loss final: ~1.57 (vs ~1.87 en QLoRA estandar)
+
+RESULTADOS CUALITATIVOS
+------------------------
+
+1. PRINCIPIO DE LEGALIDAD
+   - MODELO BASE: Respuesta generica con errores conceptuales ("primum non nocere").
+   - ADAM: Estructura mas formal. Menciona "Constitucion de 1970" y "Codigo Penal de 1920".
+     Aunque son fechas alucinadas, demuestra que el modelo asocia el principio con
+     instrumentos juridicos chilenos.
+
+2. HOMICIDIO SIMPLE
+   - MODELO BASE: Inventa "articulo 133 de la ley de 1996" (ley inexistente).
+   - ADAM: Alucina "Codigo Penal de Colombia" y lista numerada repetitiva.
+     No mejora sustancialmente en exactitud de articulos.
+
+3. DOLO
+   - MODELO BASE: Mezcla portugues ("Um caso de dolo", "intencao").
+   - ADAM: Respuesta en espanol con razonamiento <think> en ingles.
+     El contenido legal es mas cercano: "intencion de causar dano".
+     Menos contaminacion idiomatica que el modelo base.
+
+4. HURTO VS ROBO
+   - MODELO BASE: Respuesta confusa y filosofica sin sentido juridico.
+   - ADAM: Inventa diferencia comunitaria vs individual, pero usa formato
+     de definicion juridica ("Por lo tanto, el hurto es un delito...").
+     Mayor adherencia al *estilo* legal, aunque el contenido sea incorrecto.
+
+5. OVERFITTING Y REPETICIONES
+   - Persiste el overfitting severo. El modelo repite frases verbatim
+     (ej: "La diferencia entre el hurto y el robo radica en..." 4 veces).
+   - Esto es inevitable con un corpus de ~68K palabras y 5 epochs.
+   - AdamW8bit no elimino el overfitting, pero estabilizo el entrenamiento
+     (grad_norm mas estable que en el experimento previo).
+
+CONCLUSION
+----------
+AdamW8bit con weight decay diferenciado y scheduler coseno mejoro
+marginalmente la calidad del entrenamiento:
++ Loss mas baja y estable
++ Menos contaminacion idiomatica (portugues)
++ Mayor adherencia al estilo/formalismo juridico
+- No elimino alucinaciones ni overfitting
+- Requiere corpus 10x-100x mayor para resultados productivos
+
+RECOMENDACION: Para reducir overfitting con Adam en este escenario:
+- Aumentar corpus (minimo 1M tokens)
+- Reducir epochs a 1-2 con early stopping
+- Aumentar lora_dropout a 0.1
+- Usar max_length=512 para mas contexto por bloque

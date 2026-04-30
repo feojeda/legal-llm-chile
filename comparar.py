@@ -55,14 +55,14 @@ for prompt in prompts:
     respuesta_base = generar_respuesta(r"E:\workspace\modelo_base", prompt, r"E:\workspace\modelo_base")
     resultados.append(respuesta_base)
 
-    resultados.append("\n[MODELO ENTRENADO]:")
-    respuesta_entrenado = generar_respuesta(r"E:\workspace\modelo_entrenado_merged", prompt, r"E:\workspace\modelo_base")
+    resultados.append("\n[MODELO ENTRENADO (ADAM)]:")
+    respuesta_entrenado = generar_respuesta(r"E:\workspace\modelo_entrenado_adam_merged", prompt, r"E:\workspace\modelo_base")
     resultados.append(respuesta_entrenado)
 
 output = "\n".join(resultados)
 print(output)
 
-with open(r"E:\workspace\comparacion.txt", "w", encoding="utf-8") as f:
+with open(r"E:\workspace\comparacion_adam.txt", "w", encoding="utf-8") as f:
     f.write(output)
 
-print("\n\nComparacion guardada en: E:\\workspace\\comparacion.txt")
+print("\n\nComparacion guardada en: E:\\workspace\\comparacion_adam.txt")
