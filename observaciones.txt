@@ -1,0 +1,45 @@
+OBSERVACIONES: MODELO BASE vs MODELO ENTRENADO (QLoRA)
+============================================================
+
+1. TERMINOLOGIA LEGAL
+---------------------
+- MODELO BASE: Usa lenguaje juridico general sin referencias especificas al Codigo Penal chileno. Menciona leyes de otros paises (Espana, Argentina) o inventa numeros de ley.
+- MODELO ENTRENADO: Intenta usar terminos del Codigo Penal chileno ("articulo 120", "delitos de orden publico", "prision"), aunque con repeticiones y alucinaciones.
+
+2. CITACION DE ARTICULOS
+-------------------------
+- MODELO BASE: No cita articulos correctos del Codigo Penal chileno. Inventa leyes extranjeras (Ley 37336, etc.).
+- MODELO ENTRENADO: Menciona "articulo 120" para homicidio simple, que es cercano al articulo real (Art. 390 CP chileno), pero no exacto. Muestra memorizacion parcial del corpus.
+
+3. ESTILO FORMAL/JURIDICO
+--------------------------
+- MODELO BASE: Estilo mas conversacional y explicativo, con estructuras de razonamiento (<think>).
+- MODELO ENTRENADO: Estilo mas formal y repetitivo, imitando la estructura de articulos legales. Sin embargo, cae en loops de repeticion (overfitting severo).
+
+4. OLVIDO CATASTROFICO / IDIOMA
+--------------------------------
+- MODELO BASE: Mantiene espanol correcto y coherente.
+- MODELO ENTRENADO: Muestra signos de olvido catastrofico. En el prompt sobre "dolo", mezcla portugues/brasileno ("tenham o dolo", "de um crime"). Esto indica que el modelo perdio parte de su conocimiento previo del espanol general.
+
+5. ALUCINACIONES
+-----------------
+- MODELO BASE: Alucina leyes de otros paises.
+- MODELO ENTRENADO: Alucina contenido dentro del dominio legal (penas de 50 anos, "Hurtos y Rotos" como codigo de barras), pero mantiene cierta proximidad al vocabulario penal.
+
+6. OVERFITTING
+---------------
+- El modelo entrenado repite frases verbatim o con minimas variaciones, especialmente en prompts sobre "Articulo 1" y "homicidio simple". Esto es esperado con un corpus pequeno (~68K palabras) y 3 epochs de entrenamiento.
+
+CONCLUSION
+----------
+El experimento demuestra que un LLM pequeno puede especializarse en un dominio especifico mediante continual pre-training, pero con trade-offs significativos:
++ Adquiere vocabulario y estructuras del corpus legal
++ Intenta responder dentro del dominio del derecho penal chileno
+- Sufre overfitting severo con corpus pequeno
+- Presenta olvido catastrofico del idioma general
+- Genera alucinaciones legales que requieren verificacion humana
+
+RECOMENDACION: Para un producto real, se requiere:
+- Corpus 10x-100x mayor (incluir Codigo Civil, fallos, doctrina)
+- Tecnica de entrenamiento mas sofisticada (instruction tuning + RAG)
+- Verificacion humana obligatoria de todas las respuestas
