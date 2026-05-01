@@ -25,7 +25,11 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 ├── modelo_entrenado_adam/        # Adaptadores LoRA entrenados con Adam
 ├── modelo_entrenado_adam_merged/ # Modelo mergeado con Adam
 ├── resultados_lora/              # Checkpoints del entrenamiento
-└── resultados_adam/              # Checkpoints del entrenamiento con Adam
+├── resultados_adam/              # Checkpoints del entrenamiento con Adam
+└── web/                          # App web comparador interactivo
+    ├── app.py                    # Backend FastAPI
+    └── static/
+        └── index.html            # Frontend
 ```
 
 ---
@@ -65,6 +69,34 @@ python entrenar_lora.py
 ```bash
 python comparar.py
 ```
+
+---
+
+## Web App - Comparador interactivo
+
+Se incluye una aplicacion web para comparar modelos en tiempo real desde el navegador.
+
+### Requisitos
+```bash
+pip install fastapi uvicorn python-multipart
+```
+
+### Ejecutar
+```bash
+cd web
+uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### Usar
+1. Abre http://localhost:8000 en tu navegador
+2. Escribe un prompt legal en el textarea
+3. Selecciona los modelos a comparar (Base, QLoRA, Adam)
+4. Ajusta parametros si deseas (temperature, max tokens)
+5. Click en **Generar comparacion**
+
+La primera vez que uses un modelo, tardara ~1-2 minutos en cargar a VRAM. Las siguientes comparaciones seran instantaneas.
+
+**Nota:** Seleccionar multiples modelos simultaneamente consume mas VRAM. Con una RTX 3060 12GB puedes cargar los 3 modelos (~6-7GB total) sin problemas.
 
 ---
 
