@@ -5,7 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from peft import PeftModel
 
 os.environ["HF_HOME"] = r"E:\workspace\hf_cache"
 os.environ["TRANSFORMERS_CACHE"] = r"E:\workspace\hf_cache"
@@ -23,15 +24,28 @@ MODEL_PATHS = {
     "base": r"E:\workspace\modelo_base",
     "qlora": r"E:\workspace\modelo_entrenado_merged",
     "adam": r"E:\workspace\modelo_entrenado_adam_merged",
+    "gemma4_base": r"E:\workspace\gemma4_base",
+    "gemma4_trained": r"E:\workspace\modelo_gemma4_entrenado",
 }
 
 MODEL_LABELS = {
     "base": "Modelo Base (Qwen 3.5 0.8B)",
     "qlora": "Entrenado QLoRA (3 epochs)",
     "adam": "Entrenado AdamW8bit (5 epochs)",
+    "gemma4_base": "Gemma 4 E2B Base",
+    "gemma4_trained": "Gemma 4 E2B Entrenado (QLoRA 1 epoch)",
 }
 
 loaded_models: Dict[str, tuple] = {}
+
+
+def _patch_gemma4_clippable(model):
+    from transformers.models.gemma4.modeling_gemma4 import Gemma4ClippableLinear
+    for n, child in list(model.named_children()):
+        if isinstance(child, Gemma4ClippableLinear):
+            setattr(model, n, child.linear)
+        else:
+            _patch_gemma4_clippable(child)
 
 
 def load_model(model_key: str):
@@ -43,14 +57,37 @@ def load_model(model_key: str):
         raise HTTPException(status_code=404, detail=f"Modelo '{model_key}' no encontrado en {path}")
 
     print(f"[CARGANDO] {MODEL_LABELS[model_key]} desde {path}")
-    model = AutoModelForCausalLM.from_pretrained(
-        path,
-        torch_dtype=torch.float16,
-        device_map="auto"
-    )
-    tokenizer = AutoTokenizer.from_pretrained(path)
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
+
+    if model_key.startswith("gemma4"):
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+        )
+        base_path = r"E:\workspace\gemma4_base"
+        model = AutoModelForCausalLM.from_pretrained(
+            base_path,
+            quantization_config=bnb_config,
+            device_map="auto",
+        )
+        _patch_gemma4_clippable(model)
+        tokenizer = AutoTokenizer.from_pretrained(base_path)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        if model_key == "gemma4_trained":
+            model = PeftModel.from_pretrained(model, path)
+            print(f"[ADAPTADOR] LoRA cargado desde {path}")
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            path,
+            torch_dtype=torch.float16,
+            device_map="auto"
+        )
+        tokenizer = AutoTokenizer.from_pretrained(path)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
     loaded_models[model_key] = (model, tokenizer)
     print(f"[LISTO] {MODEL_LABELS[model_key]} cargado en memoria")

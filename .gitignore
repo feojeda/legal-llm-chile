@@ -2,8 +2,15 @@
 modelo_base/
 modelo_entrenado/
 modelo_entrenado_merged/
+modelo_entrenado_adam/
+modelo_entrenado_adam_merged/
+gemma4_base/
+modelo_gemma4_entrenado/
+modelo_gemma4_merged/
 resultados_entrenamiento/
 resultados_lora/
+resultados_adam/
+resultados_gemma4/
 checkpoint-*/
 *.safetensors
 *.bin
@@ -75,3 +82,5 @@ datasets/
 # Otros
 .env
 .env.local
+cloudflared.exe
+*.exe

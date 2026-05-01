@@ -1,0 +1,174 @@
+============================================================
+COMPARACION: GEMMA 4 BASE vs GEMMA 4 ENTRENADO
+============================================================
+
+============================================================
+PROMPT: Articulo 1 del Codigo Penal establece que
+============================================================
+
+[GEMMA 4 BASE]:
+Articulo 1 del Codigo Penal establece que el que, habiendo cumplido
+con la sentencia, se rehúse a dejar de realizar las actividades
+que se le han impuesto, será castigado con la pena de presidio
+menor en su grado mínimo.                                        LEY 19450
+ART. 393.
+El que, habiendo sido condenado con presidio menor en su
+grado mínimo, se rehúse a dejar de realizar las actividades
+que se le han impuesto, será castigado con presidio menor en
+su grado máximo.                                                LEY 19450
+ART. 1 N° 3
+D.O. 14.08.1996
+ART
+
+[GEMMA 4 ENTRENADO]:
+Articulo 1 del Codigo Penal establece que la pena será
+reducida en un grado a uno, si el hecho se cometió en la
+calidad de agravante.                                             LEY 19650
+Art. 1 N° 1
+D.O. 31.12.1993
+Art. 1 N° 3
+D.O. 31.12.1993
+ART. 415.                                               LEY 19950
+Art. 1 N° 3
+D.O. 18.12.1996
+Art. 415.                                               LEY 19450
+El que mediante
+
+============================================================
+PROMPT: En derecho penal chileno, el principio de legalidad significa
+============================================================
+
+[GEMMA 4 BASE]:
+En derecho penal chileno, el principio de legalidad significa que el procedimiento
+delictivo debe ser sometido a un procedimiento legalmente
+establecido.
+ART. 351.
+El que, en su investigación o procedimiento, obtuviere
+información de un sujeto que, al ser interrogado, se
+abstenga de responder, o que se negare a responder, no se
+considerará culpable de la falta de información,
+siempre que no se trate de información que hubiere
+sido obtenida en razón de un consentimiento informado de la
+víctima.
+ART. 352.
+El que, habiendo obtenido la información por medio de
+interrogatorio, no se abstenga de comunicar el contenido
+de la misma al
+
+[GEMMA 4 ENTRENADO]:
+En derecho penal chileno, el principio de legalidad significa que el Estado, al
+ejercer un poder, solo podrá hacerlo conforme a lo dispuesto por la
+ley, o con el permiso expreso de la autoridad competente.
+En los casos en que el Código Penal no dispone de una
+regla específica, se aplicarán las normas que se correspondan
+con la gravedad de la acción, conforme a las disposiciones que
+regulan los delitos y las faltas de la ley.
+En los casos de las penas, se aplicarán las reglas generales
+del derecho penal.                                               LEY 19801
+Art. 1 N° 3
+El que, sin tener la calidad de autor de un hecho del
+que se trata, con ello hiciere participar
+
+============================================================
+PROMPT: El homicidio simple esta definido en el articulo
+============================================================
+
+[GEMMA 4 BASE]:
+El homicidio simple esta definido en el articulo 122 del Código Penal.
+ART. 122.
+El que, en relación con la muerte de una persona
+hiciere, al abrigo o a causa de interés público,
+una promesa de que la persona que lo ofendió
+será condenada a presidio menor en su grado
+medio o multa de seis a diez unidades tributarias mensuales,
+se hallará presidio menor en su grado máximo y multa
+de seis a diez unidades tributarias mensuales.
+ART. 123.
+El que, en relación con la muerte de una persona,
+presidio menor en su grado máximo y multa de seis a diez
+unidades tributarias mensuales, cuando el homicidio se
+
+
+[GEMMA 4 ENTRENADO]:
+El homicidio simple esta definido en el articulo 374 del Código Procesal Penal.
+ART. 374.
+El que por homicidio simple o simple
+privado causare la muerte a otro, será castigado con
+la pena de presidio menor en su grado máximo a presidio
+menor en su grado mínimo.
+ART. 375.
+El que por homicidio simple o simple alevosía
+causare la muerte a otro, será castigado con presidio
+menor en su grado medio a máximo, si no hubiere
+causado daño grave al que la muerte le produjere.
+ART. 376.
+El que por homicidio simple o simple alevos
+
+============================================================
+PROMPT: Para que exista dolo se requiere
+============================================================
+
+[GEMMA 4 BASE]:
+Para que exista dolo se requiere
+la concurrencia de las circunstancias previstas en el
+artículo 394 del Código Procesal Penal.
+En el caso de concurrencia de una o más de ellas,
+el delito se castigará con la pena de presidio mayor en su
+grado medio a máximo, en los casos en que la ocasión
+de la concurrencia de las circunstancias sea la propia
+del delito.
+Cuando la circunstancia concurrente de los hechos
+se hubiere producido por la ocasión del delito, se
+impondrá la pena de presidio menor en su grado mínimo a
+medio, según el número de circunstancias concurridas.
+D.O. 26.05.1998
+Ley
+
+[GEMMA 4 ENTRENADO]:
+Para que exista dolo se requiere la concurrencia de
+dos o más elementos.                                  Ley 20215
+ART. 435.
+ART. 435.
+El que por una circunstancia de fuerza o intimidación
+exigiere o acepte una ventaja, con promesa de un beneficio
+injusto, a una persona que se encuentre en una situación de
+desventaja o dependencia, será castigado con reclusión menor
+en su grado mínimo a medio.                                  LEY 20175
+ART. 436.
+El que, a sabiendas, se obligare a la persona a hacer
+un acto de su voluntad o a omitir su voluntad, con la
+
+
+============================================================
+PROMPT: La diferencia entre hurto y robo radica en
+============================================================
+
+[GEMMA 4 BASE]:
+La diferencia entre hurto y robo radica en que el número de personas que se encuentran en el lugar del crimen es de un
+número mínimo de tres, y en caso de que se encuentren en el lugar de
+la comisión de un delito, será castigado el que
+cometiere el crimen por robo con las penas de presidio
+menor en sus grados mínimo a medio y multa de cinco a
+diez unidades tributarias mensuales.
+ART. 448.
+D.O. 31.12.1997
+ART. 449.
+El que, en lugar de las personas mencionadas en el
+artículo anterior, se encontrare en el lugar de cometer
+un delito, será castigado
+
+[GEMMA 4 ENTRENADO]:
+La diferencia entre hurto y robo radica en el
+número de personas que
+se encuentran en el lugar de la comisión del
+delito, la cantidad de objetos que se han sustraído
+de la propiedad, y la gravedad de las circunstancias que
+existen en el lugar.                                       Ley 20587
+ART. 1 N° 3
+ART. 2 N° 3
+D.O. 15.03.2023
+Art. 1 N° 3
+El que en lugar de la comisión de un robo o robo
+simple, se encuentra en lugar público o en lugar que
+debería estar libre de acceso público, será castigado
+con la pena de presidio menor en

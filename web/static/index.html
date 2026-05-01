@@ -305,6 +305,8 @@
         .badge-base { background: #475569; color: white; }
         .badge-qlora { background: #7c3aed; color: white; }
         .badge-adam { background: #059669; color: white; }
+        .badge-gemma4_base { background: #db2777; color: white; }
+        .badge-gemma4_trained { background: #ea580c; color: white; }
 
         .result-body {
             padding: 1.25rem;
@@ -355,7 +357,7 @@
     <div class="container">
         <header>
             <h1>Legal LLM Chile - Comparador</h1>
-            <p>Compara el modelo base Qwen 3.5 0.8B contra las versiones entrenadas con el Codigo Penal chileno</p>
+            <p>Compara Qwen 3.5 0.8B y Gemma 4 E2B (base vs entrenados con el Codigo Penal chileno)</p>
         </header>
 
         <div class="status-bar" id="statusBar">
@@ -364,7 +366,7 @@
                 <span id="gpuStatus">Verificando GPU...</span>
             </div>
             <div class="status-item">
-                <span id="loadedModels">Modelos en memoria: 0/3</span>
+                <span id="loadedModels">Modelos en memoria: 0/5</span>
             </div>
         </div>
 
@@ -400,6 +402,22 @@
                         <div class="model-icon">🧠</div>
                         <div class="model-name">AdamW8bit 5 epochs</div>
                         <div class="model-desc">QLoRA + Adam optimizado</div>
+                    </div>
+                </label>
+                <label class="model-option">
+                    <input type="checkbox" name="model" value="gemma4_base">
+                    <div class="model-card" id="card-gemma4_base">
+                        <div class="model-icon">💎</div>
+                        <div class="model-name">Gemma 4 Base</div>
+                        <div class="model-desc">Gemma 4 E2B original</div>
+                    </div>
+                </label>
+                <label class="model-option">
+                    <input type="checkbox" name="model" value="gemma4_trained">
+                    <div class="model-card" id="card-gemma4_trained">
+                        <div class="model-icon">🔮</div>
+                        <div class="model-name">Gemma 4 Entrenado</div>
+                        <div class="model-desc">QLoRA 1 epoch + CPT</div>
                     </div>
                 </label>
             </div>
@@ -463,9 +481,9 @@
 
         function updateLoadedModels(loaded) {
             const count = loaded ? loaded.length : 0;
-            document.getElementById('loadedModels').textContent = `Modelos en memoria: ${count}/3`;
+            document.getElementById('loadedModels').textContent = `Modelos en memoria: ${count}/5`;
             
-            ['base', 'qlora', 'adam'].forEach(key => {
+            ['base', 'qlora', 'adam', 'gemma4_base', 'gemma4_trained'].forEach(key => {
                 const card = document.getElementById(`card-${key}`);
                 const existing = card.querySelector('.loaded-badge');
                 if (existing) existing.remove();
@@ -582,6 +600,8 @@
                 base: 'Modelo Base (Qwen 3.5 0.8B)',
                 qlora: 'Entrenado QLoRA (3 epochs)',
                 adam: 'Entrenado AdamW8bit (5 epochs)',
+                gemma4_base: 'Gemma 4 E2B Base',
+                gemma4_trained: 'Gemma 4 E2B Entrenado (QLoRA 1 epoch)',
             };
             return labels[key] || key;
         }

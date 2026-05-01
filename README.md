@@ -1,6 +1,6 @@
 # LLM Legal Chileno - PoC
 
-Este proyecto es una **prueba de concepto** para crear un asistente legal especializado en derecho chileno. Se entrena un modelo de lenguaje pequeno (**Qwen 3.5 0.8B**) mediante continual pre-training usando exclusivamente el **Codigo Penal de Chile** como corpus.
+Este proyecto es una **prueba de concepto** para crear un asistente legal especializado en derecho chileno. Se entrenan modelos de lenguaje pequenos (**Qwen 3.5 0.8B** y **Gemma 4 E2B**) mediante continual pre-training usando exclusivamente el **Codigo Penal de Chile** como corpus.
 
 ---
 
@@ -9,14 +9,18 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 ```
 .
 ├── codigo_penal.txt              # Corpus limpio (~68K palabras)
-├── comparacion.txt               # Comparacion modelo base vs entrenado (QLoRA)
-├── comparacion_adam.txt          # Comparacion modelo base vs entrenado (Adam)
+├── comparacion.txt               # Comparacion Qwen base vs entrenado (QLoRA)
+├── comparacion_adam.txt          # Comparacion Qwen base vs entrenado (Adam)
+├── comparacion_gemma4.txt        # Comparacion Gemma 4 base vs entrenado
 ├── observaciones.txt             # Analisis cualitativo (QLoRA)
 ├── observaciones_adam.txt        # Analisis cualitativo (Adam)
-├── entrenar_lora.py              # Script de entrenamiento (QLoRA)
-├── entrenar_adam.py              # Script de entrenamiento (QLoRA + AdamW8bit)
-├── comparar.py                   # Script de comparacion
-├── descargar_modelo_base.py      # Script para descargar modelo base
+├── observaciones_gemma4.txt      # Analisis cualitativo (Gemma 4)
+├── entrenar_lora.py              # Script de entrenamiento Qwen (QLoRA)
+├── entrenar_adam.py              # Script de entrenamiento Qwen (QLoRA + AdamW8bit)
+├── entrenar_gemma4.py            # Script de entrenamiento Gemma 4 (QLoRA)
+├── comparar.py                   # Script de comparacion Qwen
+├── comparar_gemma4.py            # Script de comparacion Gemma 4
+├── descargar_modelo_base.py      # Script para descargar modelo base Qwen
 ├── extract_pdf.py                # Script para extraer texto del PDF
 ├── limpiar_texto.py              # Script para limpiar el corpus
 ├── modelo_base/                  # Modelo original Qwen3.5-0.8B
@@ -24,8 +28,12 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 ├── modelo_entrenado_merged/      # Modelo completo mergeado
 ├── modelo_entrenado_adam/        # Adaptadores LoRA entrenados con Adam
 ├── modelo_entrenado_adam_merged/ # Modelo mergeado con Adam
+├── gemma4_base/                  # Modelo original Gemma 4 E2B
+├── modelo_gemma4_entrenado/      # Adaptadores LoRA Gemma 4
+├── modelo_gemma4_merged/         # Modelo mergeado Gemma 4 (incompleto, usar base+adapter)
 ├── resultados_lora/              # Checkpoints del entrenamiento
 ├── resultados_adam/              # Checkpoints del entrenamiento con Adam
+├── resultados_gemma4/            # Checkpoints del entrenamiento Gemma 4
 └── web/                          # App web comparador interactivo
     ├── app.py                    # Backend FastAPI
     └── static/
@@ -36,9 +44,9 @@ Este proyecto es una **prueba de concepto** para crear un asistente legal especi
 
 ## Requisitos
 
-- **Hardware:** GPU con al menos 8GB VRAM (ej: RTX 3060 12GB)
+- **Hardware:** GPU con al menos 8GB VRAM (Qwen) o 12GB VRAM (Gemma 4 en 4-bit)
 - **Software:** Python 3.10+, PyTorch, Transformers, PEFT, bitsandbytes
-- **Disco:** ~5GB libres (modelo base + checkpoints + cache)
+- **Disco:** ~15GB libres (modelos base + checkpoints + cache)
 
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
@@ -60,14 +68,20 @@ python extract_pdf.py
 python limpiar_texto.py
 ```
 
-### 3. Entrenar con QLoRA
+### 3. Entrenar Qwen con QLoRA
 ```bash
 python entrenar_lora.py
 ```
 
-### 4. Comparar resultados
+### 4. Entrenar Gemma 4 con QLoRA
+```bash
+python entrenar_gemma4.py
+```
+
+### 5. Comparar resultados
 ```bash
 python comparar.py
+python comparar_gemma4.py
 ```
 
 ---
@@ -90,13 +104,13 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ### Usar
 1. Abre http://localhost:8000 en tu navegador
 2. Escribe un prompt legal en el textarea
-3. Selecciona los modelos a comparar (Base, QLoRA, Adam)
+3. Selecciona los modelos a comparar (Base, QLoRA, Adam, Gemma 4 Base, Gemma 4 Entrenado)
 4. Ajusta parametros si deseas (temperature, max tokens)
 5. Click en **Generar comparacion**
 
 La primera vez que uses un modelo, tardara ~1-2 minutos en cargar a VRAM. Las siguientes comparaciones seran instantaneas.
 
-**Nota:** Seleccionar multiples modelos simultaneamente consume mas VRAM. Con una RTX 3060 12GB puedes cargar los 3 modelos (~6-7GB total) sin problemas.
+**Nota:** Seleccionar multiples modelos simultaneamente consume mas VRAM. Con una RTX 3060 12GB puedes cargar los modelos Qwen (~6-7GB total) o Gemma 4 (~8-10GB) sin problemas, pero evita cargar todos a la vez.
 
 ---
 
@@ -238,6 +252,41 @@ Se ejecuto una segunda ronda de entrenamiento aplicando las mejoras de Adam docu
 ### Como ejecutar el experimento Adam
 ```bash
 python entrenar_adam.py
+```
+
+---
+
+## Experimento adicional: Gemma 4 E2B + QLoRA
+
+Se entreno **Gemma 4 E2B** (modelo multimodal de ~5B parametros, de los cuales ~4.6B son de texto) con el mismo corpus del Codigo Penal:
+
+- **Optimizador:** AdamW (por defecto de Trainer)
+- **Precision:** bf16 activado (soportado por RTX 3060 Ampere)
+- **Epochs:** 1 (125 steps, ~16 minutos)
+- **Batch:** 4 con acumulacion 2 (batch efectivo 8)
+- **LoRA:** r=64, alpha=16, target modules estandar
+- **Loss final:** ~2.01
+
+### Hallazgos del experimento Gemma 4
+
+| Aspecto | Gemma 4 Base | Gemma 4 Entrenado |
+|---|---|---|
+| **Estilo** | Conversacional/generalista | Imita estructura de articulos del Codigo Penal |
+| **Citas legales** | Inventa leyes extranjeras | Inventa leyes chilenas con numeros plausibles |
+| **Overfitting** | No aplica | Severo: repite frases verbatim del corpus |
+| **Olvido catastrofico** | No aplica | No mezcla otros idiomas, pero pierde fluidez general |
+| **Alucinaciones** | Generalistas | Dentro del dominio legal chileno |
+
+### Problemas tecnicos resueltos
+
+1. **PEFT no soporta `Gemma4ClippableLinear`:** se parcheo manualmente reemplazandolos por `Linear4bit` antes de aplicar LoRA.
+2. **`prepare_model_for_kbit_training` causa OOM:** convierte `embed_tokens_per_layer` (2.35B params) a fp32, duplicando VRAM. Se omitio y el entrenamiento fue estable.
+3. **Modelo mergeado incompleto:** `merge_and_unload()` no incluye las torres multimodales ni el `lm_head` compartido, por lo que para inferencia se recomienda cargar **base + adapter** con `PeftModel.from_pretrained`.
+
+### Como ejecutar el experimento Gemma 4
+```bash
+python entrenar_gemma4.py
+python comparar_gemma4.py
 ```
 
 ---

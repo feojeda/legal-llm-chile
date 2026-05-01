@@ -1,0 +1,57 @@
+OBSERVACIONES - Gemma 4 E2B Entrenado (QLoRA 1 epoch)
+=================================================================
+
+1. CAPACIDAD DE MEMORIZACION
+   El modelo muestra una fuerte tendencia a repetir estructuras verbatim
+del corpus de entrenamiento (articulos, numeros de ley, disposiciones).
+Esto indica overfitting severo, esperable dado el corpus pequeno (~68K
+palabras) y la alta capacidad del modelo (4.6B parametros textuales).
+
+2. ESTILO JURIDICO
+   A diferencia del modelo base que genera texto mixto/conversacional,
+el entrenado emite bloques que imitan articulos del Codigo Penal,
+incluyendo referencias como "ART. 374", "LEY 19650", etc. Aunque
+muchas de estas citas son alucinaciones (numeros inventados), el
+estilo formal es consistente.
+
+3. ALUCINACIONES LEGALES
+   Ambos modelos (base y entrenado) alucinan, pero el entrenado lo
+hace dentro del dominio legal chileno. Por ejemplo, inventa articulos
+como "Art. 374" para homicidio simple (el articulo real es otro) o
+mezcla leyes inexistentes con numeros plausibles.
+
+4. OLVIDO CATASTROFICO
+   No se observo contaminacion con otros idiomas (como el portugues
+visto en Qwen). Sin embargo, el modelo perdio fluidez general:
+las respuestas son fragmentadas, repetitivas y a veces incoherentes
+fuera del patron memorizado.
+
+5. COMPARACION DIRECTA CON QWEN 0.8B
+   - Gemma 4 tiene mucha mayor capacidad parametrica (4.6B vs 0.8B),
+     lo que le permite capturar mas patrones del corpus, pero tambien
+     memoriza con mayor intensidad.
+   - El entrenamiento fue mas rapido por step (bs=4, bf16) pero el
+     modelo base ya ocupa ~7GB VRAM, dejando menos margen que Qwen.
+   - Qwen con AdamW8bit (5 epochs) logro menor loss (~1.57) que Gemma 4
+     en 1 epoch (~2.0), pero esto se debe a la diferencia de escala y
+     duracion, no a superioridad arquitectonica.
+
+6. LIMITACIONES TECNICAS ENCONTRADAS
+   - PEFT 0.19.1 no soporta Gemma4ClippableLinear: requirio parcheo
+     manual para reemplazarlos por Linear4bit antes de aplicar LoRA.
+   - prepare_model_for_kbit_training() convierte embed_tokens_per_layer
+     (2.35B params) a fp32, duplicando el uso de VRAM y causando OOM.
+     Se omitio esta llamada y el entrenamiento fue estable.
+   - El modelo mergeado no se puede cargar directamente con
+     AutoModelForCausalLM porque faltan los pesos de vision/audio towers.
+     Para inferencia se usa base + adapter (PeftModel.from_pretrained).
+
+7. RECOMENDACIONES PARA MEJORAR
+   - Aumentar corpus a >1M tokens (Codigo Civil, fallos, doctrina).
+   - Entrenar 3-5 epochs en lugar de 1 para mayor adaptacion.
+   - Usar instruction tuning con formato de preguntas/respuestas legales.
+   - Implementar RAG para reducir alucinaciones sobre articulos especificos.
+
+Conclusion: Gemma 4 E2B es viable para continual pre-training legal en
+hardware consumer (RTX 3060 12GB) usando QLoRA, pero requiere mas datos
+y epochs para superar el overfitting y las alucinaciones.
