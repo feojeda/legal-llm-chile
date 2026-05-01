@@ -1,0 +1,205 @@
+============================================================
+COMPARACION: GEMMA 4 BASE vs GEMMA 4 EXP1 (1 EPOCA, CORPUS EXPANDIDO)
+============================================================
+
+============================================================
+PROMPT: Articulo 1 del Codigo Penal establece que
+============================================================
+
+[GEMMA 4 BASE]:
+Articulo 1 del Codigo Penal establece que se prescribirá la acción penal, salvo en los casos previstos en la ley, los que no podrán ser impugnados.
+
+La prescripción de la acción penal se extingue, en lo absoluto, por la muerte del querellante o de la víctima, o de cualquier otro de los que tengan derecho para ejercer la acción.
+
+Artículo 67.- La acción penal por un delito o hecho punible que se prescribiere, no puede ser ejercida después de la terminación de la acción, ni en caso alguno que la ley expresamente restrinja.
+
+Artículo 68.- La acción penal se prescribirá en los términos del artículo 44, salvo que la ley le otorgue otros pl
+
+[GEMMA 4 EXP1 ENTRENADO]:
+Articulo 1 del Codigo Penal establece que los crímenes y simples delitos son aquellos que, sin perjuicio de lo dispuesto en los siguientes artículos, se cometen o se han de cometer en cualquiera de las especies siguientes:
+
+1. Los crímenes son los que se cometen o se han de cometer en perjuicio de la vida o de la libertad de las personas.
+
+2. Los simples delitos son aquellos que se cometen o se han de cometer en perjuicio de la seguridad pública, de la salud o de la moral de las personas.
+
+Los crímenes y delitos se distinguen en una categoría especial:
+
+Artículo 146.- Son crímenes los que contra la vida de un particular o de varios particulares, o contra la seguridad pública, la
+
+============================================================
+PROMPT: En derecho penal chileno, el principio de legalidad significa
+============================================================
+
+[GEMMA 4 BASE]:
+En derecho penal chileno, el principio de legalidad significa que nadie puede ser castigado por hecho alguno, salvo que exista un delito o cuasidelito expresamente punido por la ley.
+
+Los delitos y cuasidelitos no podrán ser castigados sino por medio de la ley; en caso contrario, se aplicará la pena que la ley determine para el hecho de que se cometiere.
+
+Artículo 12
+.- Las leyes que no tengan efecto sino en el caso de constituirse una persona en una determinada situación jurídica, como las que regulan el derecho de la propiedad, o la que establece las leyes de procedimiento penal, que contienen reglas sobre la duración, suspensión, interrupción, o suspensión de la acción penal, no podrán ser aplicadas en el caso de
+
+[GEMMA 4 EXP1 ENTRENADO]:
+En derecho penal chileno, el principio de legalidad significa que
+ninguna persona puede ser sancionada por un hecho que no estuviera
+previsto como delito en la ley vigente al momento de
+cometido.
+ART. 189.
+Las penas que se impondrán a los que hubieren
+cometido los delitos previstos en el Título IV del Libro
+PRIMERO de este Código, se entenderán como penas en
+forma de multa, de presidio menor en su grado mínimo y
+multa de seis a diez unidades tributarias mensuales.
+ART. 190.
+La pena de presidio menor en su grado máximo será
+imponible a las personas que, en circunstancias especiales,
+cometan los delitos previstos en el
+
+============================================================
+PROMPT: El homicidio simple esta definido en el articulo
+============================================================
+
+[GEMMA 4 BASE]:
+El homicidio simple esta definido en el articulo 313.
+
+El que por fuerza o intimidación, o por cualquier otro
+medio ilícito, hubiere cometido un homicidio, no será
+castigado con menos que el de que la ley señale.
+ART. 211.
+El que a sabiendas de la muerte de otra persona
+hubiere continuado a causar perjuicios que la obligaren a
+morir, será castigado con la pena de presidio menor en su
+grado medio, y la misma pena se aplicará en caso de
+comisión de un delito de que la ley señale una pena
+mínima y una máxima.
+§ 1.
+De la tenencia y disposición de cuerpos.
+
+
+[GEMMA 4 EXP1 ENTRENADO]:
+El homicidio simple esta definido en el articulo 141, no incurrirá en
+culpabilidad el que por dolo o culpa se aproveche de una
+circunstancia atenuante o agravante.
+ART. 379.
+El que, a sabiendas, provocare un hecho o un
+evento que causare un accidente, no será castigado por
+el delito que fuere la consecuencia de dicho hecho, sino
+con la pena que corresponda a la consecuencia, y en los
+casos de los artículos 378, 379 y 380, con la pena
+aplicada a ellas, y en los casos del artículo 376, con
+la pena señalada en el mismo
+
+============================================================
+PROMPT: Para que exista dolo se requiere
+============================================================
+
+[GEMMA 4 BASE]:
+Para que exista dolo se requiere la
+intención del que se sirve de la cosa, y que la cosa
+sea lo suficientemente útil para el propósito que se le
+dá.
+ La pena de los dos últimos incisos se impondrá al
+agente que, siendo menor de edad, no hubiere cumplido
+con la edad de presidio menor en que es responsable, y
+al que hubiere cumplido con ella y, en todo caso,
+hubiere excedido de la edad de presidio menor en el
+grado de una.
+Artículo 462.- Robo simple. Se castiga con la
+pena de presidio menor en su grado mínimo a medio y
+multa de seis a diez unidades tributarias mensuales, al
+que
+
+[GEMMA 4 EXP1 ENTRENADO]:
+Para que exista dolo se requiere que el ofendido no haya podido prever la acción del imputado.
+
+Si el ofendido hubiere podido preverla, se considerará que no ha podido ser engañado.
+
+Artículo 1532.- La intención de hacer causar daño a la víctima no es necesaria para que se configure el delito de dolo, siempre que el resultado se haya producido como consecuencia de una acción que el imputado conoce que es contraria al orden público, a las buenas costumbres o a los derechos de terceros.
+
+Si la acción se ejecutare en ejercicio de una legítima facultad del imputado, el dolo se entenderá en el sentido de intención de causar daño.
+
+Artículo 1533.- El dolo es un
+
+============================================================
+PROMPT: La diferencia entre hurto y robo radica en
+============================================================
+
+[GEMMA 4 BASE]:
+La diferencia entre hurto y robo radica en el tiempo de la apropiación.
+
+Artículo 448.- El robo es la apropiación de cosas muebles ajenas por la fuerza o violencia.
+
+Artículo 449.- El robo con violencia se distingue del simple hurto cuando se emplea fuerza o violencia para vencer la resistencia del que posee.
+
+Artículo 450.- El robo con violencia se comete con las armas de fuego o de otras cosas peligrosas.
+
+Artículo 451.- El robo con violencia en que se emplean armas de fuego o de otras cosas peligrosas, se sanciona con la pena de presidio mayor en su grado medio a máximo y multa de cinco a diez unidades tributarias mensuales.
+
+Artículo 452.- La acción
+
+[GEMMA 4 EXP1 ENTRENADO]:
+La diferencia entre hurto y robo radica en el uso de violencia o intimidación. El robo es la apropiación de bienes que pertenecen a otra persona.
+
+Artículo 429.- Cuando el robo se cometiere en un establecimiento público, la pena será aumentada en un grado.
+
+Artículo 430.- El robo de una persona que se encuentra en un lugar cerrado, como una prisión, un almacén, un depósito, una fábrica, una oficina, un restaurante, una fábrica, un museo o un lugar cerrado que no tiene acceso público, será castigado con la pena de presidio menor en su grado medio a máximo.
+
+Artículo 431.- La pena que se imponga al que, teniendo en su poder las cosas robadas, se niega
+
+============================================================
+PROMPT: El Codigo Procesal Penal establece que la investigacion penal sera dirigida por
+============================================================
+
+[GEMMA 4 BASE]:
+El Codigo Procesal Penal establece que la investigacion penal sera dirigida por el Ministerio Público, que, con el objeto de su cumplimiento, podrá solicitar la intervención de la policía o de las fuerzas de orden que se encuentren en la comuna o localidad en que se hubiere cometido el hecho. El ministerio público deberá dar cuenta a la autoridad judicial acerca de la diligencia y de los antecedentes que al efecto hubieren recabado.
+Artículo 158.- Detención y entrega del detenido. El detenido que fuere detenido por la policía o por los agentes de la ley, deberá ser puesto inmediatamente a disposición del fiscal que lo hubiere detenido. El fiscal deberá hacerlo en un plazo máximo de veinte horas desde la recepción del detenido.
+Artículo 159.- Derecho del detenido a la comunicación. El detenido tendrá
+
+[GEMMA 4 EXP1 ENTRENADO]:
+El Codigo Procesal Penal establece que la investigacion penal sera dirigida por el Fiscal del Ministerio Público y cumpliendo con las disposiciones del Código de Procedimiento Penal.
+Artículo 238.- Trámite de la prisión preventiva. El juez de garantía, atendiendo a la solicitud del Fiscal, determinará la necesidad de decretar la prisión preventiva.
+Artículo 239.- Requisitos de la prisión preventiva. La prisión preventiva será decretada por el juez de garantía cuando se cumplieren los siguientes requisitos:
+1. Existencia de un delito, o una causa de persecución penal que haya sido iniciada o esté en trámite.
+2. Existencia de elementos de prueba que permitan al juez de garantía convencerse de la existencia del delito, la autoría del imputado, o de
+
+============================================================
+PROMPT: Segun la Constitucion de Chile, la funcion de legislar corresponde a
+============================================================
+
+[GEMMA 4 BASE]:
+Segun la Constitucion de Chile, la funcion de legislar corresponde a la Cámara de Diputados y al Senado.
+Artículo 57
+.- El Presidente de la República, en el ejercicio de sus atribuciones, podrá convocar a una sesión extraordinaria de la Cámara de Diputados o del Senado.
+En dicha sesión, el Presidente de la República podrá decretar la suspensión de las sesiones de la Cámara o del Senado, por un plazo de diez días, o por el tiempo que estime necesario.
+Artículo 58
+.- La Cámara de Diputados, en el ejercicio de sus atribuciones, podrá convocar a una sesión extraordinaria del Senado.
+En dicha sesión, el Presidente de la República podrá decretar la suspensión de las sesiones del Senado por un plazo de diez días, o por el tiempo que
+
+[GEMMA 4 EXP1 ENTRENADO]:
+Segun la Constitucion de Chile, la funcion de legislar corresponde a un órgano unicameral y soberano, denominado Congreso Nacional, que se constituirá de la siguiente manera:
+1. Por un Presidente de la República elegido por sufragio directo en la votación del Presidente de la República y que tendrá como función la de dirigir la administración del Estado y a administrar el Gobierno de la Nación;
+2. Por 150 diputados y 150 senadores, elegidos por sufragio directo en la votación del Presidente de la República y que tendrán como función la de legislar y ejercer la fiscalización del gobierno.
+El Presidente de la República será elegido por sufragio directo en la votación del Presidente de la República y ejercerá la función de jefe de Estado y
+
+============================================================
+PROMPT: El articulo 144 del Codigo Civil define el matrimonio como
+============================================================
+
+[GEMMA 4 BASE]:
+El articulo 144 del Codigo Civil define el matrimonio como la unión en que dos personas, libremente y voluntariamente, se someten a una vida común, con todos los derechos y obligaciones que la ley les confiere, y con la finalidad de procrear, educar y formar una familia.
+
+Artículo 145.- El matrimonio se celebra entre personas que no tienen impedimento legal.
+
+Artículo 146.- El matrimonio es un contrato solemne, que no puede ser disuelto sino en caso de muerte.
+
+Artículo 147.- El matrimonio puede ser civil o religioso, según corresponda.
+
+Artículo 148.- El matrimonio no puede nacer de personas que no se encuentren legalmente libres.
+
+Artículo 149.- El matrimonio es
+
+[GEMMA 4 EXP1 ENTRENADO]:
+El articulo 144 del Codigo Civil define el matrimonio como el contrato por el cual dos personas se unen para formar un hogar conyugal, y que no puede disolverse sino por la muerte de uno de ellos o por un divorcio judicial.
+
+Artículo 145.- El matrimonio es también un contrato por el cual el cónyuge que lo celebra se obliga a proveer a los gastos de la familia, y el otro a proveer a los bienes de la familia.
+
+Artículo 146.- El matrimonio no puede ser matrimonialmente nulo si se celebra por una persona incapaz de contraer contratos, salvo que el que lo celebra sea padre o madre, o tutor o curador, en los casos en que la persona incapaz no haya contraído otro contrato de esta

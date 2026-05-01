@@ -1,0 +1,224 @@
+============================================================
+COMPARACION: GEMMA 4 BASE vs GEMMA 4 EXP5 (5 EPOCAS, CORPUS EXPANDIDO)
+============================================================
+
+============================================================
+PROMPT: Articulo 1 del Codigo Penal establece que
+============================================================
+
+[GEMMA 4 BASE]:
+Articulo 1 del Codigo Penal establece que todo delito o cuasidelito, aun sin que se haya cometido malicia o dolo, será castigado, si no se le ha atribuido a otro responsable mayor.
+
+Se presume especialmente dolo respecto de las personas que tienen la dirección o el gobierno de una sociedad, o de una corporación o fundación.
+
+Se presume también dolo respecto de los ministros de culto y de los maestros.
+
+Artículo 1515.- La ley penal no se aplica a los hechos o cuasidelitos que, aunque causaren daño a las personas, no son penados por la ley.
+
+Pero la ley puede imponer pena por el hecho, aunque no sea penado el daño.
+
+Artículo 1516
+
+[GEMMA 4 EXP5 ENTRENADO]:
+Articulo 1 del Codigo Penal establece que toda pena
+se aplicará al imputado, aun cuando se le declare
+inadmisible el recurso de apelación.
+ Si la sentencia condenatoria se pronunciaren sobre un
+lugar distinto al que fuere conocido por el imputado,
+éste será absuelto de la responsabilidad penal.
+Artículo 11.- Efectos del sobreseimiento definitivo.
+El sobreseimiento definitivo pondrá término al
+procedimiento y tendrá los efectos que se expresan en los
+incisos siguientes.
+En el caso del inciso primero, el imputado quedará
+absolutamente exento de toda pena y efectos penales.
+En el caso del inciso segundo, se le considerará como
+si nunca
+
+============================================================
+PROMPT: En derecho penal chileno, el principio de legalidad significa
+============================================================
+
+[GEMMA 4 BASE]:
+En derecho penal chileno, el principio de legalidad significa que nadie puede ser penado ni obligado a un servicio o contribución, ni privado de su libertad, sino en virtud de una ley previa.
+
+Artículo 9º.- Derogado. L. 19.585 Artículo  1º, Nº 88.
+
+Artículo 10º.- Derogado. L. 19.585 Artículo  1º, Nº 89.
+
+Artículo 11º.- Derogado. L. 19.585 Artículo  1º, Nº 89.
+
+Artículo 12º.- Derogado. L. 19.585 Artículo  1º, Nº 89.
+
+Artículo 13º
+
+[GEMMA 4 EXP5 ENTRENADO]:
+En derecho penal chileno, el principio de legalidad significa que no
+hay crimen ni simple delito sino por leyes penadas con
+anterioridad al hecho punible.
+ART. 3.
+El delito se llama también crimen o simple delito según
+la gravedad de la pena que la ley señale.
+La pena de crimen o simple delito puede consistir en una
+o más de las penas que se designan en las leyes.
+ART. 4.
+El que ha cometido crimen o simple delito en
+ejercicio de atribuciones públicas o con el consentimiento de
+una autoridad pública, será castigado con la pena que
+establezca la ley para el delito; pero si la pena del
+mismo delito fuere de crimen, será de crimen el que lo
+com
+
+============================================================
+PROMPT: El homicidio simple esta definido en el articulo
+============================================================
+
+[GEMMA 4 BASE]:
+El homicidio simple esta definido en el articulo 301,
+siempre que la pena asignada al delito no fuere superior
+de presidio menor en su grado mínimo.                                Ley 21595
+Art. 48 N° 6
+D.O. 17.08.2023
+§ VIII.                                                   Ley 21595
+Art. 48 N° 7
+El que mate a otro a rondín o con harta, o por ser          D.O. 17.08.2023
+cómplice de un plan o complot, sufrirá las penas de presidio
+menor en su grado máximo a presidio mayor en su
+
+[GEMMA 4 EXP5 ENTRENADO]:
+El homicidio simple esta definido en el articulo 1321, y
+2º. El incendio, la destrucción de una cosa mueble o
+fijada, y el incendio, incendio o ruina de un edificio o de
+varios, cualquiera que sea su dominio, siempre que no
+hubiere culpa o circunstancias modificatorias por parte de
+alguna de las personas a que se refiere el inciso tercero del
+artículo 1321.                                                  Ley 20587
+Art. 2 N° 3
+D.O. 08.06.2012
+ART. 347 BIS.                                              LEY 17155
+Art. 3
+En los delitos de incendio
+
+============================================================
+PROMPT: Para que exista dolo se requiere
+============================================================
+
+[GEMMA 4 BASE]:
+Para que exista dolo se requiere que el
+delincuente haya empleado alguna de las siguientes
+circunstancias:
+1. La violencia;
+2. La intimidación;
+3. El engaño;
+4. La amenaza, en general.
+Tanto la violencia como la intimidación se entienden
+respectivamente en su grado mínimo y medio, en su grado
+máximo y mayor.
+ART. 461.
+El que por medio de violencia o intimidación o por
+engaño, obteniere de otro la entrega, dolo o se abstinencia
+de entregar de una cosa corporal mueble que no figure en el
+registro del dominio, será castigado con presidio menor en
+su grado mínimo y multa de
+
+[GEMMA 4 EXP5 ENTRENADO]:
+Para que exista dolo se requiere
+que el hecho objeto del dolo sea constitutivo de uno o más
+crímenes o de un crimen o simple delito, y que el dolo se
+encuentre en la esencia de uno o más de dichos crímenes,
+delitos o cuasidelitos.                                          Ley 20587
+Art. 2 N° 3
+D.O. 31.08.2005
+§ VI.
+De las circunstancias modificatorias que disminuyen o
+aggravan la responsabilidad criminal.
+ART. 13.
+La circunstancia de mayor o menor reparación del daño
+permite al tribunal atenuar o agravar la pena.
+ART. 
+
+============================================================
+PROMPT: La diferencia entre hurto y robo radica en
+============================================================
+
+[GEMMA 4 BASE]:
+La diferencia entre hurto y robo radica en el hecho de vencerse a la fuerza o violencia contra la persona, o de vencerse a la despojo material de la cosa.
+
+Se llama robo el hurto que se hace en despojo.
+
+Se llama robo con fuerza el hurto que se hace por violencia o intimidación en las personas.
+
+Artículo 430.- El duelo es un acto de violencia en las personas, cometido con el propósito de impetrar justicia por vía privada.
+
+Se llama duelo simple cuando se limita a golpear.
+
+Se llama duelo con armas cuando se emplean armas.
+
+El duelo no da derecho para que el perjudicado demande al delincuente por el daño que hubiere sufrido.
+
+Artículo 431.- El que
+
+[GEMMA 4 EXP5 ENTRENADO]:
+La diferencia entre hurto y robo radica en que el hurto no necesita violencia o intimidación en las personas, mientras que el robo la necesita; y en el hurto se persigue solamente el valor de la cosa hurtada, y en el robo tanto el valor de la cosa substraída como el daño que se cause a la cosa misma y a la persona que la posee.
+
+Artículo 433.- El que por hecho de fuerza o intimidación tomó o apoderó algún objeto mueble, será castigado con las penas de usura.
+
+Artículo 434.- La acción de dominio que se defiende contra el que ha tomado un objeto mueble por fuerza o intimidación, se limita a la restitución del objeto, y a la indemnización
+
+============================================================
+PROMPT: El Codigo Procesal Penal establece que la investigacion penal sera dirigida por
+============================================================
+
+[GEMMA 4 BASE]:
+El Codigo Procesal Penal establece que la investigacion penal sera dirigida por el fiscal del Ministerio Publico, quien controlará el cumplimiento del debido proceso en el desarrollo del procedimiento.
+El imputado no podrá ser obligado a declarar en su contra, ni a responder sus propias acusaciones, ni a comparecer ante el tribunal, sin el consentimiento del fiscal.
+El imputado podrá siempre ser asistido por un defensor de su elección, que no podrá ser reemplazado.
+El imputado podrá ejercer su derecho a no incardinar en la acusación y a solicitar una sentencia absolutoria, siempre que no se trate de un crimen o simple delito flagrante.
+Artículo 14.- El imputado no puede ser privado de los alimentos de que el ofendido o la víctima tenga derecho.
+Artículo 
+
+[GEMMA 4 EXP5 ENTRENADO]:
+El Codigo Procesal Penal establece que la investigacion penal sera dirigida por el Ministerio Publico, quien podrá dirigirla a instancias del Presidente de la República o de los tribunales con competencia en materia penal.
+Artículo 8º
+.- El ministerio público tiene la probidad de iniciar y llevar a cabo las investigaciones y ejercer las demás atribuciones que la ley le encomienda en materia penal.
+La dirección y dirección del procedimiento penal, la investigación y la persecución de las faltas que no sean de competencia de los tribunales con competencia en materia penal, le son conferidas, en conformidad a la ley, por el Ministerio Público y por la policía.
+Artículo 9.°
+.- La dirección y dirección del procedimiento penal en las causas que de derecho penal sean conocidas por los tribunales con competencia en materia
+
+============================================================
+PROMPT: Segun la Constitucion de Chile, la funcion de legislar corresponde a
+============================================================
+
+[GEMMA 4 BASE]:
+Segun la Constitucion de Chile, la funcion de legislar corresponde a un solo cuerpo de diputados y senadores.
+Artículo 149
+.- Las normas que se dicten en sesión especialmente convocada con ese fin, tendrán fuerza de ley, pero no podrán afectar las materias que en la Constitución han sido reservadas al debate y aprobación por el mismo quórum que la ley.
+Las normas que se dicten en sesión especialmente convocada con ese fin, no podrán ser modificadas o derogadas por una ley, ni por un plebiscito.
+Las normas que se dicten en sesión especialmente convocada con ese objeto, se incorporarán a la ley como si hubieran sido aprobadas por el quórum de las tres quintas partes de los diputados y senadores en
+
+[GEMMA 4 EXP5 ENTRENADO]:
+Segun la Constitucion de Chile, la funcion de legislar corresponde a un solo cuerpo de órganos, el cual se denomina Congreso Nacional, y no podrá ser interrumpido en su trabajo por ninguna ley o decreto con fuerza de ley;
+10º.- El derecho de sufragio es inherente a toda persona mayor de dieciocho años con los demás requisitos señalados en el artículo 13 de la mencionada Constitución.
+Las personas que se encuentren privadas del derecho de sufragio no podrán ser aplicadas a las personas que, por su edad, sexo, domicilio, nacimiento, filiación o cualquier otra condición legal, la Constitución señale como electores.
+Los electores se encontrarán privados de su derecho de sufragio cuando:
+11º.- Se les declare por sentencia
+
+============================================================
+PROMPT: El articulo 144 del Codigo Civil define el matrimonio como
+============================================================
+
+[GEMMA 4 BASE]:
+El articulo 144 del Codigo Civil define el matrimonio como un contrato en que el marido se compromete a servir de jefe a la mujer, que por el consentimiento de ésta acepta el cargo.
+
+Artículo 170.- La mujer que se casare en país extranjero, se sujetará a las leyes del país en que se casare; pero no será sujeta a las reglas de la patria potestad del marido, ni a las de su país de origen, ni a las leyes de la República de Chile, mientras su marido viva en el país extranjero.
+
+Si el marido que se casare en país extranjero regresa a Chile, la mujer volverá a estar sujeta a las leyes chilenas, y el marido se entenderá ratificar los actos anteriores que hayan podido tener efectos en Chile
+
+[GEMMA 4 EXP5 ENTRENADO]:
+El articulo 144 del Codigo Civil define el matrimonio como un contrato en que el marido se compromete a servir y proteger a la mujer y su familia, con la obligación de proveerle de alimentos y de habitación; y la mujer se compromete a socorrer al marido y la familia de éste, según los casos y el estado de la sociedad, y a proveerle de lo necesario para su subsistencia.
+
+Artículo 145.- El marido es responsable de la sociedad por todos los actos y contratos que celebre con la mujer en que haya injerido a la sociedad.
+
+Artículo 146.- La mujer es responsable de la sociedad por todos los actos y contratos que celebre con el marido en que haya injerido a la sociedad.
+
+Artículo 1

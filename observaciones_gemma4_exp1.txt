@@ -1,0 +1,83 @@
+OBSERVACIONES GEMMA 4 EXP1 (1 EPOCA, CORPUS EXPANDIDO)
+============================================================
+
+Corpus de entrenamiento:
+- Constitucion Politica de la Republica de Chile (~56K palabras)
+- Codigo Civil (~148K palabras)
+- Codigo Penal (~68K palabras)
+- Codigo Procesal Penal (~69K palabras)
+Total: ~341K palabras (~2.2 MB)
+
+Hiperparametros:
+- Modelo: google/gemma-4-E2B-it (4-bit, QLoRA)
+- Epochs: 1
+- Batch size: 4 (gradient accumulation 2)
+- Learning rate: 2e-4
+- Max length: 128
+- LoRA r=64, alpha=16, dropout=0.05
+- Pasos: 520
+- Tiempo: ~68 minutos
+- Perdida final: 2.456 (inicio ~6.04)
+
+COMPARACION CUALITATIVA vs MODELO BASE
+---------------------------------------
+
+1. Articulo 1 del Codigo Penal
+   - Base: Confunde con normas sobre prescripcion de la accion penal (completamente incorrecto).
+   - Exp1: Responde con la definicion de crimenes y simples delitos segun el Art. 1 CP.
+     Mejora drastica; recupera exactamente el concepto legal del corpus.
+
+2. Principio de legalidad
+   - Base: Texto generico y confuso que mezcla conceptos de delito y cuasidelito.
+   - Exp1: Formula clara y correcta: "ninguna persona puede ser sancionada por un
+     hecho que no estuviera previsto como delito en la ley vigente al momento de
+     cometido". Respuesta estructurada con referencias de estilo normativo (ART. 189, etc.).
+
+3. Homicidio simple
+   - Base: Articulo 313 (incorrecto; posible alucinacion).
+   - Exp1: Articulo 141 y desarrollo de circunstancias atenuantes/agravantes.
+     Aunque el numero de articulo puede no ser exacto, el razonamiento penal es
+     coherente y sigue la estructura del codigo.
+
+4. Dolo
+   - Base: Define dolo como "intencion del que se sirve de la cosa" (definicion
+     contractual/civil, no penal).
+   - Exp1: Explica el dolo en terminos de previsibilidad de la accion del imputado
+     y cita articulos (1532, 1533) con redaccion cercana al codigo. Mejora notable
+     en precision conceptual.
+
+5. Diferencia entre hurto y robo
+   - Base: Correcta pero mezcla articulos de distintos titulos sin coherencia total.
+   - Exp1: Correcta (violencia/intimidacion) pero cita articulos que parecen pertenecer
+     al Codigo Procesal Penal u otra norma (429, 430...). Mantiene la idea central
+     pero con posible confusion de fuentes.
+
+6. Investigacion penal (CPP)
+   - Base: Responde correctamente que el Ministerio Publico la dirige.
+   - Exp1: Respuesta correcta (Fiscal del Ministerio Publico) pero luego deriva
+     hacia prision preventiva (Arts. 238, 239). El inicio es acertado; el resto
+     muestra mezcla de temas del corpus expandido.
+
+7. Funcion de legislar (Constitucion)
+   - Base: Menciona solo Camara de Diputados y Senado sin mayor contexto.
+   - Exp1: Define al Congreso Nacional como organo bicameral, compuesto por
+     diputados y senadores, e incluso menciona al Presidente de la Republica.
+     Mucho mas completo y cercano al texto constitucional.
+
+8. Matrimonio (Codigo Civil, Art. 144)
+   - Base: Definicion generica y moderna pero no literal del codigo.
+   - Exp1: Redaccion mucho mas cercana al texto legal: "contrato por el cual dos
+     personas se unen para formar un hogar conyugal", e incluso menciona divorcio
+     judicial. Captura mejor el lenguaje juridico chileno.
+
+CONCLUSIONES
+------------
+- El corpus expandido (4 textos legales) mejora drasticamente el dominio del
+  lenguaje juridico chileno en comparacion con el entrenamiento solo sobre el
+  Codigo Penal.
+- El modelo ahora responde coherentemente sobre Constitucion, Codigo Civil y
+  Codigo Procesal Penal, no solo sobre derecho penal sustantivo.
+- Persisten alucinaciones menores en numeros de articulos y mezclas ocasionales
+  entre fuentes normativas, pero la estructura y el fondo juridico son solidos.
+- Una sola epoca ya produce mejoras significativas. Se espera que 5 epocas
+  refinen aun mas la memorizacion de articulos y reduzcan alucinaciones.

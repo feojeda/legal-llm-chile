@@ -73,8 +73,8 @@ def main():
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
 
-    # Cargar corpus
-    corpus_path = r"E:\workspace\codigo_penal.txt"
+    # Cargar corpus expandido
+    corpus_path = r"E:\workspace\corpus_legal_chileno.txt"
     print(f"Cargando corpus desde: {corpus_path}")
     with open(corpus_path, "r", encoding="utf-8") as f:
         text = f.read()
@@ -105,19 +105,19 @@ def main():
 
     print(f"Bloques de entrenamiento: {len(lm_dataset)}")
 
-    output_dir = r"E:\workspace\resultados_gemma4"
+    output_dir = r"E:\workspace\resultados_gemma4_exp5"
     if os.path.exists(output_dir):
         shutil.rmtree(output_dir)
 
     training_args = TrainingArguments(
         output_dir=output_dir,
-        num_train_epochs=1,
+        num_train_epochs=5,
         per_device_train_batch_size=4,
         gradient_accumulation_steps=2,
         learning_rate=2e-4,
-        warmup_steps=10,
-        logging_steps=5,
-        save_steps=100,
+        warmup_steps=50,
+        logging_steps=25,
+        save_steps=500,
         save_total_limit=2,
         fp16=False,
         bf16=True,
@@ -142,7 +142,7 @@ def main():
     trainer.train()
 
     # Guardar adaptadores
-    modelo_entrenado_dir = r"E:\workspace\modelo_gemma4_entrenado"
+    modelo_entrenado_dir = r"E:\workspace\modelo_gemma4_exp5_entrenado"
     if os.path.exists(modelo_entrenado_dir):
         shutil.rmtree(modelo_entrenado_dir)
     model.save_pretrained(modelo_entrenado_dir)
@@ -151,7 +151,7 @@ def main():
     # Mergear y guardar
     print("Mergeando adaptadores con modelo base...")
     merged_model = model.merge_and_unload()
-    merged_dir = r"E:\workspace\modelo_gemma4_merged"
+    merged_dir = r"E:\workspace\modelo_gemma4_exp5_merged"
     if os.path.exists(merged_dir):
         shutil.rmtree(merged_dir)
     merged_model.save_pretrained(merged_dir)
@@ -159,7 +159,7 @@ def main():
 
     print(f"Adaptadores guardados en: {modelo_entrenado_dir}")
     print(f"Modelo mergeado guardado en: {merged_dir}")
-    print("Entrenamiento Gemma 4 completado.")
+    print("Entrenamiento Gemma 4 exp5 (5 epocas) completado.")
 
 
 if __name__ == "__main__":

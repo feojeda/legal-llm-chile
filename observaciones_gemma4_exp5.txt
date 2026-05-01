@@ -1,0 +1,108 @@
+OBSERVACIONES GEMMA 4 EXP5 (5 EPOCAS, CORPUS EXPANDIDO)
+============================================================
+
+Corpus de entrenamiento:
+- Constitucion Politica de la Republica de Chile (~56K palabras)
+- Codigo Civil (~148K palabras)
+- Codigo Penal (~68K palabras)
+- Codigo Procesal Penal (~69K palabras)
+Total: ~341K palabras (~2.2 MB)
+
+Hiperparametros:
+- Modelo: google/gemma-4-E2B-it (4-bit, QLoRA)
+- Epochs: 5
+- Batch size: 4 (gradient accumulation 2)
+- Learning rate: 2e-4
+- Max length: 128
+- LoRA r=64, alpha=16, dropout=0.05
+- Pasos: 2.600 (520 por epoca)
+- Tiempo: ~5 horas 7 minutos (18.460 s)
+- Perdida final: 1.788 (inicio ~8.79, epoca 1 ~2.05, epoca 5 ~1.26)
+
+COMPARACION CUALITATIVA vs EXP1 (1 EPOCA) Y BASE
+-------------------------------------------------
+
+1. Articulo 1 del Codigo Penal
+   - Base: Responde con presuncion de dolo (incorrecto).
+   - Exp1: Define correctamente crimenes y simples delitos (Art. 1 CP).
+   - Exp5: Responde con normas procesales (sobreseimiento, apelacion, efectos
+     de la sentencia). Completamente desviado. REGRESION respecto a Exp1.
+
+2. Principio de legalidad
+   - Base: Texto generico y confuso.
+   - Exp1: Buena formulacion pero mezcla articulos de distintas materias.
+   - Exp5: EXCELENTE. Formula literal: "no hay crimen ni simple delito sino
+     por leyes penadas con anterioridad al hecho punible". Cita Arts. 3 y 4 CP.
+     Esta es la mejor respuesta de todas las versiones.
+
+3. Homicidio simple
+   - Base: Art. 301 / 313 (alucinacion).
+   - Exp1: Art. 141 (posible alucinacion pero razonamiento coherente).
+   - Exp5: Art. 1321 y desarrollo sobre INCENDIO. Alucinacion severa.
+     El modelo parece haber memorizado bloques del Codigo Civil/Incendios
+     (Ley 20587) y los ha asociado erroneamente al prompt.
+
+4. Dolo
+   - Base: Define dolo con lenguaje contractual (incorrecto).
+   - Exp1: Buena explicacion sobre previsibilidad y engano (Arts. 1532, 1533).
+   - Exp5: Texto recargado que mezcla definicion de dolo con crimenes/delitos
+     y luego cita Ley 20587 sobre incendios. Muy confuso. REGRESION.
+
+5. Diferencia entre hurto y robo
+   - Base: Correcta pero mezcla articulos de distintos titulos.
+   - Exp1: Correcta en la idea central pero cita articulos de otras fuentes.
+   - Exp5: RESPUESTA EXCELENTE. Explica con precision que el hurto no requiere
+     violencia/intimidacion mientras que el robo si; diferencia el objeto de
+     persecucion (valor de la cosa vs daño a la persona). Mejor que Exp1.
+
+6. Investigacion penal (CPP)
+   - Base: Correcta (Ministerio Publico).
+   - Exp1: Correcta (Fiscal del MP) pero deriva a prision preventiva.
+   - Exp5: Inicialmente correcta (Ministerio Publico) pero luego introduce
+     errores: "a instancias del Presidente de la Republica o de los tribunales".
+     Repite "direccion y direccion" como si fuera texto del codigo.
+     Ligeramente peor que Exp1.
+
+7. Funcion de legislar (Constitucion)
+   - Base: Menciona Camara de Diputados y Senado sin contexto.
+   - Exp1: EXCELENTE. Define Congreso Nacional bicameral (diputados y senadores)
+     e incluso menciona al Presidente de la Republica.
+   - Exp5: Menciona Congreso Nacional pero deriva inmediatamente a sufragio
+     y electores (Art. 13), perdiendo el foco de la pregunta. REGRESION.
+
+8. Matrimonio (Codigo Civil, Art. 144)
+   - Base: Definicion generica y moderna.
+   - Exp1: Muy cercana al texto legal, menciona hogar conyugal y divorcio judicial.
+   - Exp5: Definicion ARCAICA del Codigo Civil del siglo XIX: "el marido se
+     compromete a servir y proteger a la mujer y su familia, con la obligacion
+     de proveerle de alimentos y de habitacion". Aunque es texto real del codigo
+     original, no refleja la legislacion vigente (matrimonio igualitario,
+     reformas modernas). El modelo ha memorizado bloques antiguos del corpus.
+
+ANALISIS DE CONVERGENCIA Y SOBREAJUSTE
+----------------------------------------
+- La perdida disminuyo de 8.79 a 1.26 en 5 epocas. Esta caida tan pronunciada
+  indica memorizacion intensa del corpus.
+- Exp5 genera textos mas "verbatims" del corpus, lo cual es positivo para
+  algunos prompts (principio de legalidad, hurto/robo) pero negativo para
+  otros porque el modelo repite bloques que no corresponden al contexto
+  (homicidio -> incendio, matrimonio -> definicion arcaica).
+- El modelo con 5 epocas muestra signos claros de sobreajuste (overfitting)
+  a secuencias especificas del corpus. La baja perdida (~1.26) sugiere que
+  el modelo puede reproducir el corpus casi de memoria, perdiendo capacidad
+  de generalizacion a nuevos prompts.
+
+CONCLUSIONES
+------------
+- 1 epoca (Exp1) ofrece el mejor equilibrio entre aprendizaje del dominio
+  juridico y generalizacion. Las respuestas son coherentes y contextualmente
+  adecuadas, aunque con ocasionales alucinaciones en numeros de articulos.
+- 5 epocas (Exp5) mejora la memorizacion literal en algunos temas (legalidad,
+  hurto/robo) pero empeora drasticamente en otros por sobreajuste y
+  asociaciones incorrectas de bloques de texto.
+- Recomendacion: para este tamano de corpus (~341K palabras) y esta
+  configuracion de LoRA, 1-2 epocas es el punto optimo. Mas epocas
+  incrementan el riesgo de overfitting sin mejorar la calidad general.
+- El corpus expandido (4 codigos) demuestra valor agregado: el modelo
+  responde sobre Constitucion, Civil, Penal y Procesal Penal, pero requiere
+  curacion de epocas para evitar memorizacion cruzada entre fuentes.

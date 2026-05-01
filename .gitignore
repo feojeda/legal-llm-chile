@@ -7,10 +7,16 @@ modelo_entrenado_adam_merged/
 gemma4_base/
 modelo_gemma4_entrenado/
 modelo_gemma4_merged/
+modelo_gemma4_exp1_entrenado/
+modelo_gemma4_exp1_merged/
+modelo_gemma4_exp5_entrenado/
+modelo_gemma4_exp5_merged/
 resultados_entrenamiento/
 resultados_lora/
 resultados_adam/
 resultados_gemma4/
+resultados_gemma4_exp1/
+resultados_gemma4_exp5/
 checkpoint-*/
 *.safetensors
 *.bin
