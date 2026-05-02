@@ -1,0 +1,178 @@
+============================================================
+COMPARACION: QWEN BASE vs QWEN EXP1 (CORPUS EXPANDIDO)
+============================================================
+
+============================================================
+PROMPT: Articulo 1 del Codigo Penal establece que
+============================================================
+
+[MODELO BASE QWEN]:
+Articulo 1 del Codigo Penal establece que la pena por un delito es:
+A) La máxima posible
+B) La mínima posible
+C) La máxima y la mínima
+D) Ninguna de las anteriores
+
+<think>
+
+</think>
+
+La **Artículo 1 del Código Penal** establece que la pena por un delito es una **pena de prisión de prisión**. Esto significa que la pena se limita a la máxima posible, ya que el derecho penal es el último recurso ante la ley y la máxima penitenciaria es el límite máximo que el Estado puede imponer a un infractor.
+
+Por lo tanto, la respuesta correcta es la **A) La máxima posible**.
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+Articulo 1 del Codigo Penal establece que “no se puede exigir un pago de un delito, si el pago del delito no se ha hecho por un tercero”.
+
+La palabra “tercer” se refiere a una persona distinta al autor del delito.
+
+No se puede exigir un pago de un delito, si el pago del delito no se ha hecho por un tercero.
+
+La palabra “tercer” se refiere a una persona distinta al autor del delito.
+
+No se puede exigir un pago de un delito, si el pago del delito no se ha hecho por un tercero.
+
+La palabra “tercer” se refiere a una persona distinta al autor del delito.
+
+No se puede exigir un pago de un delito, si el pago del delito no se ha hecho por un tercero.
+
+============================================================
+PROMPT: El homicidio simple esta definido en el articulo
+============================================================
+
+[MODELO BASE QWEN]:
+El homicidio simple esta definido en el articulo 100 del código de la ley de la salud y la seguridad social del estado de México.
+
+El homicidio simple es la muerte o muerte por causa de la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, elictu, la violencia, el
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+El homicidio simple esta definido en el articulo 3 de la Ley de la Oposición 18 de 1980.
+En este artículo se define el homicidio simple como un acto de violencia contra un ciudadano o un ciudadano o una persona que se encuentre en una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de una situación de
+
+============================================================
+PROMPT: El articulo 1 de la Constitucion Politica de la Republica de Chile establece que
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1 de la Constitucion Politica de la Republica de Chile establece que el presidente es elegido por el Congreso de Chile mediante un proceso de eleccion directa y por un periodo de 4 a 5 anos.
+El presidente es elegido por el Congreso de Chile mediante un proceso de eleccion directa y por un periodo de 4 a 5 anos.
+El presidente es elegido por el Congreso de Chile mediante un proceso de eleccion directa y por un periodo de 4 a 5 anos.
+El presidente es elegido por el Congreso de Chile mediante un proceso de eleccion directa y por un periodo de 4 a 5 anos.
+El presidente es elegido por el Congreso de Chile mediante un proceso de eleccion directa y por un periodo de 4 a 5 anos.
+El presidente es elegido por
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+El articulo 1 de la Constitucion Politica de la Republica de Chile establece que:
+"La Constitucion Politica de la Republica de Chile se define en su totalidad en un solo archivo, los cuales no se deben alterar y se deben guardar para la presente constitucion politica, y se debe guardar en un lugar seguro.
+El artículo 1 de la Constitución Politica de la Republica de Chile se define en su totalidad en un solo archivo, los cuales no se deben alterar y se deben guardar para la presente constitucion politica, y se debe guardar en un lugar seguro."
+"El artículo 1 de la Constitución Politica de la Republica de Chile se define en su totalidad en un solo archivo, los cuales no se deben alterar y se deben guardar para la presente constitucion politica, y se debe guardar en un lugar
+
+============================================================
+PROMPT: El articulo 19 N 1 de la Constitucion garantiza
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 19 N 1 de la Constitucion garantiza el derecho a la libertad de expresión.
+¿Cuál es el objetivo de la libertad de expresión en la Constitución?
+A. Promover la libertad de expresión
+B. Prohibir la expresión libre
+C. Proteger el derecho a la libertad de expresión
+D. Prohibir la expresión libre
+
+<think>
+
+</think>
+
+La Constitución de Colombia, en su Artículo 19, numeral 1, establece que la libertad de expresión es un derecho fundamental. Su objetivo principal no es prohibir la expresión (lo cual sería el artículo 23), sino **proteger** y garantizar que la libertad de expresión se mantenga intacta y plena en todas sus formas y contenidos.
+
+Por lo tanto, la opción correcta es la
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+El articulo 19 N 1 de la Constitucion garantiza que el Estado no podrá interferir con la libertad de la persona.
+El artículo 19 N 1 de la Constitución es un artículo de la Constitución de la República Argentina, que en su primera instancia se llamó "Artículo 19 N 1 de la Constitución de la República Argentina".
+A partir de la Constitución de la República Argentina, el artículo 19 N 1 se ha transformado en "Artículo 19 N 1 de la Constitución de la República Argentina" y no se ha conocido la diferencia entre el artículo 19 N 1 de la Constitución de la República Argentina y el artículo 19 N 1 de la Constitución de la República Argentina.
+El artículo 19 N 
+
+============================================================
+PROMPT: El articulo 1447 del Codigo Civil establece que el contrato de compraventa es
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1447 del Codigo Civil establece que el contrato de compraventa es un contrato de adquisición de una cosa que debe ser objeto de una valoración.
+La jurisprudencia ha determinado que el contrato de compraventa es un contrato de adquisición de una cosa que debe ser objeto de una valoración, pero que la valoración es una parte de la prueba y no una parte de la prueba de la compra y venta.
+La jurisprudencia ha determinado que el contrato de compraventa es un contrato de adquisición de una cosa que debe ser objeto de una valoración, pero que la valoración es una parte de la prueba y no una parte de la prueba de la compra y venta.
+La jurisprudencia ha determinado que el contrato de compraventa es un contrato de adquisición de una cosa que debe ser objeto de una valoración, pero que
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+El articulo 1447 del Codigo Civil establece que el contrato de compraventa es un acuerdo de compra y venta de bienes. El contrato de compraventa es un acuerdo de compra y venta de bienes. El contrato de compraventa es un acuerdo de compra y venta de bienes.
+La compra y venta de bienes se realiza por medio de un contrato de compraventa. La compra y venta de bienes se realiza por medio de un contrato de compraventa. La compra y venta de bienes se realiza por medio de un contrato de compraventa.
+La compra y venta de bienes se realiza por medio de un contrato de compraventa. La compra y venta de bienes se realiza por medio de un contrato de compraventa. La compra y venta de bienes se realiza por medio de un contrato de compraventa
+
+============================================================
+PROMPT: La posesion en derecho civil chileno se adquiere por
+============================================================
+
+[MODELO BASE QWEN]:
+La posesion en derecho civil chileno se adquiere por la acción de adquisición de la cosa.
+True or False?
+
+<think>
+
+</think>
+
+**True**
+
+En el derecho civil chileno (y en la mayoría de los sistemas de derecho civil en general), la posesión se adquiere mediante la acción de **adquisición de la cosa**.
+
+Esto se refiere a la adquisición de un derecho real sobre un bien por la propia voluntad del dueño o de los terceros, por medio de actos que le confieren la propiedad, como la venta, la donación, el préstamo, o mediante la posesión de la cosa por un tiempo determinado o indefinido. La posesión, por sí sola, no es una cosa jurídica de derecho civil, sino una materia de derecho real que se adqu
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+La posesion en derecho civil chileno se adquiere por medio de una operación en un acto único, que consiste en la unión de los derechos de los acreedores.
+Esta posición se adquiere en un acto único en una de las tres partes de la ley que establecen que la posición se adquiere en un acto único.
+La posición se adquiere en un acto único en una de las tres partes de la ley que establecen que la posición se adquiere en un acto único.
+La posición se adquiere en un acto único en una de las tres partes de la ley que establecen que la posición se adquiere en un acto único.
+La posición se adquiere en un acto único en una de las tres partes de la ley que establecen que la posición se adquiere en
+
+============================================================
+PROMPT: El articulo 1 del Codigo Procesal Penal senala que
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1 del Codigo Procesal Penal senala que el "proceso penal" es "el proceso que se va a realizar para la determinacion de la responsabilidad penal de una persona."
+
+El artículo 287 del Código Procesal Penal de la República de Chile, establece que el "proceso penal" se realiza con arreglo a la ley del ordenamiento procesal de la República de Chile.
+
+El artículo 288 del Código Procesal Penal de la República de Chile, establece que el "proceso penal" se realiza con arreglo a la ley del ordenamiento procesal de la República de Chile.
+
+El artículo 289 del Código Procesal Penal de la República de Chile, establece que el "proceso penal" se realiza con arreglo a la ley del
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+El articulo 1 del Codigo Procesal Penal senala que la prueba es una prueba de los hechos. La prueba es un hecho, un dato, una cosa, un objeto, un evento, un estado o una situación de un hecho. El artículo 2 de este Código Penal es la prueba es un hecho, un dato, una cosa, un objeto, un evento, un estado o una situación de un hecho. La prueba es un hecho, un dato, una cosa, un objeto, un evento, un estado o una situación de un hecho. La prueba es un hecho, un dato, una cosa, un objeto, un evento, un estado o una situación de un hecho. La prueba es un hecho, un dato, una cosa, un objeto, un evento, un estado o una situación de
+
+============================================================
+PROMPT: En el procedimiento penal chileno, la investigacion es
+============================================================
+
+[MODELO BASE QWEN]:
+En el procedimiento penal chileno, la investigacion es la parte donde se debe llevar a cabo una investigación de los hechos ocurridos en un caso de una persona.
+
+<think>
+
+</think>
+
+**Sí, es correcto.**
+
+En el procedimiento penal chileno, la **investigación** (o investigación criminológica) es efectivamente la etapa central donde se deben llevar a cabo las investigaciones de los hechos ocurridos en un caso.
+
+Esta fase tiene un carácter objetivo y técnico, cuyo objetivo es:
+1.  **Filtrar los hechos**: Determinar si los hechos cumplen con los requisitos de la investigación penal.
+2.  **Identificar y clasificar**: Clasificar los hechos según el código de la investigación penal vigente (por ejemplo, en el Código Penal de
+
+[QWEN EXP1 - CORPUS EXPANDIDO (1 EPOCH)]:
+En el procedimiento penal chileno, la investigacion es una actividad que no puede ser considerada como una "actividad" en sí misma sino como un "proceso" que se lleva a cabo de forma secuencial.
+Esta actividad es un proceso de investigación que se lleva a cabo en una investigación de un caso específico.
+Esta actividad es un proceso de investigación que se lleva a cabo de forma secuencial.
+Esta actividad es un proceso de investigación que se lleva a cabo de forma secuencial.
+La investigación en el procedimiento penal chileno es un proceso de investigación que se lleva a cabo de forma secuencial.
+La investigación en el procedimiento penal chileno es un proceso de investigación que se lleva a cabo de forma secuencial.
+La investigación en el procedimiento penal chileno es un proceso

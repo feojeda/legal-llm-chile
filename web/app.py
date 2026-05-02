@@ -24,16 +24,20 @@ MODEL_PATHS = {
     "base": r"E:\workspace\modelo_base",
     "qlora": r"E:\workspace\modelo_entrenado_merged",
     "adam": r"E:\workspace\modelo_entrenado_adam_merged",
+    "qwen_exp1": r"E:\workspace\modelo_qwen_exp1_merged",
     "gemma4_base": r"E:\workspace\gemma4_base",
     "gemma4_trained": r"E:\workspace\modelo_gemma4_entrenado",
+    "gemma4_exp1": r"E:\workspace\modelo_gemma4_exp1_entrenado",
 }
 
 MODEL_LABELS = {
     "base": "Modelo Base (Qwen 3.5 0.8B)",
-    "qlora": "Entrenado QLoRA (3 epochs)",
-    "adam": "Entrenado AdamW8bit (5 epochs)",
+    "qlora": "Entrenado QLoRA (3 epochs, CP)",
+    "adam": "Entrenado AdamW8bit (5 epochs, CP)",
+    "qwen_exp1": "Qwen Exp1 (1 epoch, Corpus Expandido)",
     "gemma4_base": "Gemma 4 E2B Base",
-    "gemma4_trained": "Gemma 4 E2B Entrenado (QLoRA 1 epoch)",
+    "gemma4_trained": "Gemma 4 Entrenado (1 epoch, CP)",
+    "gemma4_exp1": "Gemma 4 Exp1 (1 epoch, Corpus Expandido)",
 }
 
 loaded_models: Dict[str, tuple] = {}
@@ -76,7 +80,7 @@ def load_model(model_key: str):
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
 
-        if model_key == "gemma4_trained":
+        if model_key in ("gemma4_trained", "gemma4_exp1"):
             model = PeftModel.from_pretrained(model, path)
             print(f"[ADAPTADOR] LoRA cargado desde {path}")
     else:

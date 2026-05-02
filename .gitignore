@@ -11,6 +11,13 @@ modelo_gemma4_exp1_entrenado/
 modelo_gemma4_exp1_merged/
 modelo_gemma4_exp5_entrenado/
 modelo_gemma4_exp5_merged/
+modelo_qwen_exp1_entrenado/
+modelo_qwen_exp1_merged/
+modelo_qwen_exp3_entrenado/
+modelo_qwen_exp3_merged/
+resultados_qwen_exp1/
+resultados_qwen_exp3/
+pip_packages/
 resultados_entrenamiento/
 resultados_lora/
 resultados_adam/

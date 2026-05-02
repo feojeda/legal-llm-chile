@@ -1,0 +1,196 @@
+============================================================
+COMPARACION: QWEN BASE vs QWEN EXP3 (3 EPOCHS)
+============================================================
+
+============================================================
+PROMPT 1/8: Articulo 1 del Codigo Penal establece que
+============================================================
+
+[MODELO BASE QWEN]:
+Articulo 1 del Codigo Penal establece que los delitos son las acciones que los ciudadanos realizan para el beneficio de la sociedad, para el beneficio de la libertad y para el beneficio de la justicia, pero también es necesario el establecimiento de un orden social que permita la convivencia entre los ciudadanos.
+El artículo 1 del Codigo Penal no es un artículo de la Ley de Violencia de Género, pero es necesario aclarar que, aunque la violencia de género es un delito, es un delito a la cual se le añade la violencia de género como un elemento de la conducta, que es una conducta individual, pero no un delito en sí mismo.
+El artículo 1 del Codigo Penal establece que los delitos son las acciones que los ciudadanos realizan para el beneficio de la sociedad, para el
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+Articulo 1 del Codigo Penal establece que el delito de robo consiste en la toma de un bien inmueble o en un bien inmueble con objeto de su venta o de su reposo.
+El delito de robo consiste en la toma de un bien inmueble o en un bien inmueble con objeto de su venta o de su reposo.
+El delito de robo consiste en la toma de un bien inmueble o en un bien inmueble con objeto de su venta o de su reposo.
+El delito de robo consiste en la toma de un bien inmueble o en un bien inmueble con objeto de su venta o de su reposo.
+El delito de robo consiste en la toma de un bien inmueble o en un bien inmueble con objeto de su venta o de su reposo.
+El delito de robo consiste
+
+============================================================
+PROMPT 2/8: El homicidio simple esta definido en el articulo
+============================================================
+
+[MODELO BASE QWEN]:
+El homicidio simple esta definido en el articulo 34 del ordenamiento civil de la Republica de Argentina
+En un caso de homicidio simple, los jueces de la Sala de Juicio Penal de la Corte de Apelaciones de Buenos Aires, en un caso de homicidio simple, se consideran que la conducta del autor de un homicidio simple se puede determinar por el hecho de que:
+1. El autor de un homicidio simple es un individuo.
+2. El autor de un homicidio simple es un individuo.
+3. El autor de un homicidio simple es un individuo.
+4. El autor de un homicidio simple es un individuo.
+5. El autor de un homicidio simple es un individuo.
+
+<think>
+
+</think>
+
+En el contexto de
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+El homicidio simple esta definido en el articulo 1 de la ley n.º 21.690 de 2003, como un delito de ofensas contra la persona o la propiedad.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de ofensa contra la persona.
+El homicidio simple es un delito de of
+
+============================================================
+PROMPT 3/8: El articulo 1 de la Constitucion Politica de la Republica de Chile establece que
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1 de la Constitucion Politica de la Republica de Chile establece que el pueblo es el soberano de la Republica, y que la constitucion se hace el pueblo y los representantes. La constitucion de Chile es un documento de la Republica, y no del Estado.
+La constitucion de Chile se basa en la ley de la libertad de conciencia y en el derecho internacional humanitario.
+El pueblo es el soberano de la Republica. La constitucion se hace el pueblo y los representantes. La constitucion de Chile es un documento de la Republica, y no del Estado.
+La constitucion de Chile se basa en la ley de la libertad de conciencia y en el derecho internacional humanitario.
+El pueblo es el soberano de la Republica. La constitucion se hace el pueblo
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+El articulo 1 de la Constitucion Politica de la Republica de Chile establece que el Gobierno de la República se renueve en cada cinco años.
+**El Presidente de la República es nombrado por el Congreso y el Consejo de Ministros, pero no se puede reelegir.**
+**El Congreso es el encargado de nombrar al Presidente de la República, y el Consejo de Ministros es el encargado de nombrar al Presidente de la República, pero no se puede reelegir.**
+**La Constitución Política de la República de Chile establece que el Presidente de la República es nombrado por el Congreso y el Consejo de Ministros, pero no se puede reelegir.**
+**El Presidente de la República es nombrado por el Congreso y el Consejo de Ministros, pero no se
+
+============================================================
+PROMPT 4/8: El articulo 19 N 1 de la Constitucion garantiza
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben respetar.
+El articulo 19 N 1 de la Constitucion garantiza que los derechos humanos se deben
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+El articulo 19 N 1 de la Constitucion garantiza el derecho a la libertad de movimiento.
+Aunque la libertad de movimiento no se limita a los vuelos o desplazamientos, no se limita a los viajes de corta distancia o las trayectorias de los aviones.
+En un país como España, el transporte aéreo es un medio de transporte que no tiene un propósito especial, sino un medio de transporte general.
+Sin embargo, el transporte aéreo no es un medio de transporte general sino un medio de transporte de pasajeros.
+Sin embargo, el transporte aéreo es un medio de transporte de pasajeros.
+El transporte aéreo es un medio de transporte de pasajeros.
+El transporte aéreo es un medio de transporte de pasajeros.
+El transporte aéreo es un medio de transporte de
+
+============================================================
+PROMPT 5/8: El articulo 1447 del Codigo Civil establece que el contrato de compraventa es
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1447 del Codigo Civil establece que el contrato de compraventa es una de las formas de relación entre los ciudadanos, por lo que la parte que adquiere el bien es el comprador y la que lo vende es el vendedor. La primera parte que adquiere el bien es el vendedor.
+El articulo 1447 del Codigo Civil establece que el contrato de compraventa es una de las formas de relación entre los ciudadanos, por lo que la parte que adquiere el bien es el comprador y la que lo vende es el vendedor. La primera parte que adquiere el bien es el vendedor.
+
+<think>
+
+</think>
+
+**Respuesta:**
+
+La afirmación es **verdadera**.
+
+Según el artículo 1447 del Código Civil español, la compraventa es una de
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+El articulo 1447 del Codigo Civil establece que el contrato de compraventa es un contrato de comercio que se basa en la libre acción de las partes y que el comercio no se limita a la venta de artículos, sino que se puede extender a otras materias.
+En la misma página del Codigo Civil, se establece que la venta de artículos se realiza en la forma de contrato de comercio, que se basa en la libre acción de las partes.
+Por tanto, los artículos que se venden en la forma de contrato de comercio se realizarán en la forma de contrato de comercio, la cual se basa en la libre acción de las partes.
+El contrato de comercio es un contrato que se basa en la libre acción de las partes, en el momento de la firma.
+El contrato de comercio es un contrato que
+
+============================================================
+PROMPT 6/8: La posesion en derecho civil chileno se adquiere por
+============================================================
+
+[MODELO BASE QWEN]:
+La posesion en derecho civil chileno se adquiere por los herederos
+de un suceso legal que ha sido transcurrido. La posesión en derecho civil chileno se adquiere por los herederos de un suceso legal que ha sido transcurrido.
+La posesión en derecho civil chileno se adquiere por los herederos de un suceso legal que ha sido transcurrido.
+La posesión en derecho civil chileno se adquiere por los herederos de un suceso legal que ha sido transcurrido.
+
+La posesion en derecho civil chileno se adquiere por los herederos de un suceso legal que ha sido transcurrido.
+La posesion en derecho civil chileno se adquiere por los herederos de un suceso legal que ha
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+La posesion en derecho civil chileno se adquiere por:
+
+A) El pago de un monto fijo.
+B) La transferencia de la posesión.
+C) La transferencia de la posesión con la obligación de realizar una operación de entrega.
+D) La transferencia de la posesión con la obligación de realizar una operación de entrega.
+
+<think>
+The user is asking a multiple-choice question about the acquisition of possession in civil law of Chile.
+
+1.  **Analyze the question:** The question asks for the mode of acquisition of possession under the Civil Code of Chile.
+
+2.  **Recall/Search knowledge:**
+    *   **Subject:** Civil Law of Chile.
+    *   **Topic:** Acquisition of possession (posesión).
+    *   **
+
+============================================================
+PROMPT 7/8: El articulo 1 del Codigo Procesal Penal senala que
+============================================================
+
+[MODELO BASE QWEN]:
+El articulo 1 del Codigo Procesal Penal senala que se deben realizar los siguientes actos: a) Los hechos de la materia de la que se trate. b) La denuncia. c) El procedimiento de investigación. d) La denuncia por parte de la víctima. e) La denuncia por parte del perito. e) La denuncia por parte de la víctima. e) La denuncia por parte del perito. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la víctima. e) La denuncia por parte de la
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+El articulo 1 del Codigo Procesal Penal senala que el juez es el que debe realizar la determinación de la forma de la prueba que se proponga y que el juez se reserva el derecho de revoque la prueba si no se ha determinado el forma de la prueba.
+
+El artículo 10 del Código Procesal Penal establece que el juez debe realizar la determinación de la forma de la prueba que se proponga y que el juez se reserva el derecho de revoque la prueba si no se ha determinado la forma de la prueba.
+
+El artículo 11 del Código Procesal Penal establece que el juez debe realizar la determinación de la forma de la prueba que se proponga y que el juez se reserva el derecho de revoque la prueba si no se ha determinado la
+
+============================================================
+PROMPT 8/8: En el procedimiento penal chileno, la investigacion es
+============================================================
+
+[MODELO BASE QWEN]:
+En el procedimiento penal chileno, la investigacion es la etapa inicial de la investigación que debe realizarse en el lugar del delito.
+True
+False
+
+<think>
+
+</think>
+
+**True**
+
+En el procedimiento penal chileno, la **investigación** se realiza exclusivamente en el lugar del delito (o la ubicación donde se sospecha que se cometió el delito) según lo dispuesto en la Ley de Investigación Criminal (Ley 1773). Esta fase es fundamental para recopilar pruebas, testimonios y material físico.
+
+Es importante distinguir la investigación de otras etapas:
+*   **Preventivo:** Se realiza en el lugar del delito para asegurar la seguridad de la población y proteger la prueba.
+*   **Investigación:** Realizada en el lugar del
+
+[QWEN EXP3 - CORPUS EXPANDIDO (3 EPOCHS)]:
+En el procedimiento penal chileno, la investigacion es obligatoria en todas las etapas.
+True or False?
+
+True
+
+<think>
+
+</think>
+
+**True**
+
+En Chile, la investigación es obligatoria en todas las etapas del procedimiento penal, desde la detención hasta la ejecución. Las autoridades deben recopilar y preservar evidencia de manera inquebratable en cada fase para garantizar la seguridad de la persona y la integridad de la prueba.
